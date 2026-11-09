@@ -74,7 +74,7 @@ services:
       pangolin:
         condition: service_healthy
     environment:
-      - CLOUDFLARE_API_KEY=${CLOUDFLARE_API_TOKEN}
+      - CLOUDFLARE_DNS_API_TOKEN=${CLOUDFLARE_API_TOKEN}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3001/api/v1/"]
       interval: 10s
